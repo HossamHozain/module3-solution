@@ -1,0 +1,14 @@
+<div class="loader" ng-if="loader">
+</div>
+<div ng-if="error" class="error">Nothing found</div>
+<ul ng-repeat="item in items" >
+  <li >
+    <span>
+        {{item.short_name}},
+        {{item.name}},
+    </span>
+{{item.description}}
+     <br>
+      <button ng-click="remove({index:$index})">Don't want this one!</button>
+  </li>
+</ul>
